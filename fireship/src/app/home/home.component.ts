@@ -1,0 +1,22 @@
+import { Component, OnInit, Version } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+  
+  clicked = false
+  
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  handleClick(){
+    this.clicked = true
+  }
+
+}
