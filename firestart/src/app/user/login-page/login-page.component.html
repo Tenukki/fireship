@@ -6,6 +6,14 @@
     </button>
   </div>
 
+
+  <div *ngIf="!(afAuth.authState | async)">
+    <!-- omitted -->
+  
+    <app-email-login></app-email-login>
+  </div>
+  
+
   <div *ngIf="afAuth.authState | async as user" class="logout">
     <p>
       Logged in as <strong>{{ user.email }}</strong>
